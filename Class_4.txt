@@ -1,0 +1,73 @@
+DQL (Data Query language) Operations 
+====================================
+1. Projection Method : Projection method means representing all the columns in the table
+                     Ex: select *from <table Name>
+
+2. Selection Method  : Selection Method means representing the columns what we needed 
+                     Ex: select <cn1>,<cn2>.. from <table Name>
+
+
+3. Joins : Joins are used to work with more than one table. 
+   ==========================================================
+   Rules to follow for joins concept 
+              Rule 1. we need to have 2 tables for sure 
+              Rule 2. Both tables should have the same number of columns and the same data type. 
+              Rule 3. Understanding the concept Purpose, try to maintain the few same rows in both tables. 
+
+   a) The joins concept was divided into two types. 
+        i) Ansi Joins = ANSI joins are the techniques which work with the ON condition. 
+                        a) Inner Join : Inner join is used to specify common rows between the tables. 
+                                        SYNTAX : SELECT *FROM <TN1> INNER JOIN <TN2> ON <TN1>.<CNAME> = <TN2>.<CNAME>
+
+
+
+                        b) Outer Join 
+                                 - Left Outer Join : All the data from the left-side table will be visible, 
+                                                     but only matching data from the right-side table.
+                                       SYNTAX : SELECT *FROM <TN1> LEFT OUTER JOIN <TN2> ON <TN1>.<CNAME> = <TN2>.<CNAME>
+                                         
+                                 - Right Outer Join : All the data from the right-side table, only the matching data from the left-side table 
+                                      SYNTAX : SELECT *FROM <TN1> RIGHT OUTER JOIN <TN2> ON <TN1>.<CNAME> = <TN2>.<CNAME>
+
+
+                                 - Full Outer Join : Combination of left outer join and right outer join 
+                                      SYNTAX : SELECT *FROM <TN1> FULL OUTER JOIN <TN2> ON <TN1>.<CNAME> = <TN2>.<CNAME>
+
+
+                        c) Cross Join : All the rows in the left-side table will be compared with the right-side table. 
+                                      SYNTAX : SELECT *FROM <TN1> CROSS JOIN <TN2>
+
+
+
+                   
+        ii) Non_Ansi Joins = Non-Ansi Joins are the technique which works with the Where condition.
+                        a) Equi_join : Equi join works the same as an inner join, 
+                                       only instead of using `ON`, we will use a `WHERE` condition. 
+                                       We should not use any punctuation (>,<,>=,<=,!=,==) except `=`. 
+                                       Only then can we say it is an equi join. 
+
+                                       SYNTAX : SELECT *FROM <TN1>,<TN2> WHERE <TN1>.<CN> = <TN2>.<CN>
+
+
+                        b) Non_Equi_join : Give any punctuation except the =.  
+                                       SYNTAX : SELECT *FROM <TN1>,<TN2> WHERE <TN1>.<CN> > <TN2>.<CN>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

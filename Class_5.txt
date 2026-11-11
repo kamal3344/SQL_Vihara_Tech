@@ -1,0 +1,114 @@
+Auto (Seed / Increment concept)
+===============================
+1. This technique is only used on numerical columns. 
+2. The default seed value is 1. 
+3. For the column we want to auto-increment, we have to maintain it as identity. 
+
+SYNTAX : CREATE TABLE <TN> (<CN1> <IDENTITY> <STARTING_VALUE , STEP_SIZE>,<CN2>,<CN3>,......)
+
+
+
+SET OPERATORS 
+=============
+1. Set operator technique in SQL is used to find the relations between the tables. 
+2. To implement the set operator technique, definitely we need two tables, for sure. 
+3. Both tables should have the same number of columns, and the data type should match. 
+4. There are four functions in the set operator. 
+                  a) union : Union function: common data will be considered only one time. 
+                            a = {1,2,3,4}
+                            b = {3,4,5,6}
+                            SYNTAX : SELECT *FROM <TN1>
+                                     UNION
+                                     SELECT *FROM <TN2>
+
+                            RESULT = {1,2,3,4,5,6}
+
+                  b) union_all : All the data points will be considered from both tables. 
+                            a = {1,2,3,4}
+                            b = {3,4,5,6}
+                            SYNTAX : SELECT *FROM <TN1>
+                                     UNION ALL
+                                     SELECT *FROM <TN2>
+
+                            RESULT = {1,2,3,4,3,4,5,6}
+
+
+                  c) intersection : Only the common data between the tables will be getting an output. 
+                            a = {1,2,3,4}
+                            b = {3,4,5,6}
+                            SYNTAX : SELECT *FROM <TN1>
+                                     INTERSECT 
+                                     SELECT *FROM <TN2>
+
+                            RESULT = {3,4}
+
+
+
+                  d) except : Except function from the left-side table, 
+                              ALL the data it will show except the common rows in both tables  
+                            a = {1,2,3,4}
+                            b = {3,4,5,6}
+                            SYNTAX : SELECT *FROM <TN1>
+                                     EXCEPT
+                                     SELECT *FROM <TN2>
+
+                            RESULT = {1,2}
+
+
+5. For better understanding purposes, maintain some common rows between two tables. 
+
+
+
+Difference Between char and varchar
+====================================
+1. `char` and `varchar` are the data types which are used to take only the text inputs from the user. 
+2. The maximum capacity of the char and Varchar to store in the temporary memory was 2 GB.
+
+CREATE TABLE STUDENT (STDID INT, STDNAME CHAR(10), STDLOC VARCHAR(10) )
+
+CHAR(10) & VARCHAR(10) -> 10 Indicates 10 bytes of Memory
+                          1 Each byte means 8 bits 
+                          10 byte means 10 * 8 = 80 bits of Memory -> will occupy on top of RAM (temp Memory)
+
+
+
+- INSERT INTO STUDENT VALUES (1 , 'JOHN' , 'USA')
+
+
+ 
+
+       STDID                     STDNAME(10)                                       STDLOC(10)
+       =======================================================================================================
+         1                         'JOHN'  (4 BYTES OCCUPIED)                       'USA' (3 BYTES OCCUPIED)
+                                           (6 BYTES WASTE)                            
+
+
+
+         2                         'PETER' (5 BYTES OCCUPIED)                        'NEW YORK' (7 PENDING + 3 NEW)
+                                           (5 BYTES WASTE)                                       (0 WASTE)
+
+
+         3                         'SURYA NARAYANA' (PASS ONLY 10 CHARATERS)         'INDONESIONA INDIA' (PASS ONLY 10)
+
+         4                         'STEVE' ()                                         'INDIA' (10)(REUSE THE MEMORY)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

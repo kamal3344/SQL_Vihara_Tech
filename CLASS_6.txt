@@ -1,0 +1,67 @@
+Primary Key and forgein key 
+===========================
+
+Rules to Implement the topic:
+
+      1. We need two tables. The first table we have to consider as the parent table, 
+         and the second table we have to consider as the child table. 
+      2. In the parent table, we have to maintain the primary key. 
+         In the child table, we have to maintain the foreign key. 
+      3. We have to maintain one column as common between two tables to 
+         maintain the reference. 
+
+SYNTAX:
+
+CREATE TABLE <PARENT_TN> (<CN1><DTYPE><PRIMARY KEY>,<CN2><DTYPE>,......)
+CREATE TABLE <CHILD_TN> (<CN1><DTYPE>,<CN2><DTYPE> REFERENCES <PARENT_TN><CN>)
+
+DML RULES ON PRIMARY TABLE AND CHILD TABLE 
+===========================================
+
+INSERT
+======
+
+      1. We can insert anything into the parent table, 
+         but we can also insert anything into the child table BUT 
+         We have to maintain the references from parent table 
+
+UPDATE
+======
+      1. You can update anything in the parent table except the reference column. 
+         You can also update anything in the child, but the reference should match.  
+
+
+DELETE
+=======
+      1. We can't delete anything in the parent because the child will be affected, 
+         but as a child, I can remove anything, whatever I want.  
+
+
+
+CASCADE RULES 
+==============
+1. Using the cascade rules, we can maintain a healthy relation between the parent table and the child table. 
+2. In the parent table, the referenced column: 
+   if we remove anything in the referenced column, automatically, in the child, 
+   it should also be removed. If I update anything in the parent table, 
+   automatically it should be updated in the child. 
+   That can be done only with the help of the rules called cascade rules. 
+
+
+What is the difference between CUI and GUI 
+===========================================
+CUI = Command-line user interface  
+
+
+GUI = Graphical user interface 
+
+
+
+
+
+
+
+
+
+
+

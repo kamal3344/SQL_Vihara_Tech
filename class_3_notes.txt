@@ -1,0 +1,126 @@
+Structured Query Language (SQL)
+===============================
+1. SQL is not a programming language. SQL is a query language.
+2. To write the SQL queries, the best platform in the market was SSMS. 
+3. SSMS means SQL Server Management Studio. 
+4. SSMS is a tool where we can write the SQL query, 
+   and SSMS was developed by a company called Microsoft. 
+
+SSMS Services 
+================================================
+1. Database Engine : Database engine service is used to write the SQL query to the 
+                     structured database. 
+
+2. SSRS            : SQL Server Reporting Service is used to convert the files. 
+                     Example: PDF to Word document and Word document to PDF. 
+
+3. SSIS            : SQL Server Integration Service is used to connect one 
+                     database with another database. 
+
+4. SSAS            : SQL Server Analytic Service is used to convert the data into a 
+                     representative format. 
+
+5. Azure Cloud     : We can connect the tool to the cloud to get the data. 
+
+Topics in SQL we are going to learn 
+===================================
+1. Downloading and Installation of SSMS 
+2. Platform Dependent and Platform Independent 
+3. DDL  (Data Definition Language) Operations
+4. DML (Data Manipulation Language) Operations
+5. DQL (Data Query Language) Operations 
+6. TCL (Transaction Control Language) Operations
+7. Difference in data types (Char and Varchar)
+8. Auto Seed Increment Concept 
+9. Set Operators 
+10. Primary Key and Forgein Key concept 
+11. Ranking concept 
+12. Clauses concept 
+13. How SQL -----> DB Integration
+14. How Python + SQL will work in real applications 
+
+============================================================================================
+What is Platform Independent and Platform Dependent ?
+======================================================
+
+Platform Dependent:                                          Platform Indepdent
+-------------------                                          -------------------
+  
+1. O.S + Any Processor                                        1. Any O.S + Any Processor 
+   Ex: SQL                                                       Ex: Python | Java 
+
+
+
+1. What is the Meaning of Syntax ?
+   Syntax Means (Rule or structure) that we need to follow to write the query 
+
+
+2. How to create a New database in SSMS using SQL ?
+   Syntax : CREATE DATABASE <DATABASE_NAME>
+
+DDL (Data Definition Language) OPERATIONS 
+=========================================
+Using the DDL operations, we can create the table. and we can modify the table 
+
+                 a) CREATE : The `CREATE FUNCTION` in SQL is used to create the Table [Excel sheet] , 
+                             table name [Excel sheet Name] 
+                             the column name, and the column data type 
+                             [data type -> what type of data I can sent to the Column in a Sheet(table)].
+
+                             syntax : CREATE TABLE <TABLE_NAME> (<CN1><DTYPE> , <CN2><DTYPE>, ...........)
+
+ 
+                 B) ALTER : ALTER FUNCTION is used to modify the existing TABLE in the database.
+                            1.Using Alter change the data type of the column 
+                            Syntax : ALTER TABLE <TABLE_NAME> ALTER COLUMN <COL_NAME> <NEW_DATA_TYPE>
+
+                            2. Using ALTER, we can create a new column. 
+                            SYNTAX : ALTER TABLE <TABLE_NAME> ADD <NEW_COL_NAME> <D_TYPE>
+
+                            3. Using `ALTER`, we can remove the column from the table. 
+                            SYNTAX: ALTER TABLE <TABLE_NAME> DROP COLUMN <COLUMN_NAME>
+ 
+                 C) SP_RENAME : `SP rename` is used to change the column name. 
+                                SYNTAX : SP_RENAME '<OLD_TN>.<CN>',<'NEW_COL_NAME'> 
+ 
+                 D) TRUNCATE : `TRUNCATE` is used to remove all the rows from the table, 
+                                 but the table will be alive. 
+                             SYNTAX : TRUNCATE TABLE <TN>
+
+
+                 E) DROP     : IT IS GOING TO DELETE THE TABLE FROM THE DATABASE                       
+                              SYNTAX : DROP TABLE <TN>
+
+
+
+DML (DATA MANIPULATION LANGUAGE) OPERATIONS 
+===========================================
+INSERT : We can insert the rows individually into the existing table. 
+SYNTAX : INSERT INTO <TABLE_NAME> VALUES (PASS_VALUES)
+
+
+UPDATE : Update the data you needed. 
+SYNTAX : UPDATE <TN> SET <CONDITION> WHERE <CONDITION>
+
+
+
+DELETE : The Delete option in the DML can do two different TECHNIQUES.
+         1. YOU CAN REMOVE A SINGLE ROW 
+         SYNTAX : DELETE <TN> WHERE <CONDITION>
+         2. WE CAN REMOVE ALL ROWS FROM THE TABLE 
+         SYNTAX : DELETE <TN>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 

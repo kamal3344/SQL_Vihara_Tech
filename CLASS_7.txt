@@ -1,0 +1,53 @@
+TCL (Transaction Control Language) Operations 
+==============================================
+1. TCL Operations are used to undo the recent action.
+2. For example, if we inserted a row into the table unknowingly, 
+   or if we updated the table, or if we deleted any row in the table unknowingly, 
+   we can undo the recent action.
+3. Without using the TCL commands, if we insert the data into the table or perform 
+   any operation, it is fixed. We can't undo the operation.  
+4. If we want do the undo about recent action, please use the TCL techniques.
+
+Below are the TCL Commands 
+===========================
+1.   BEGIN TRANSACTION 
+2.   COMMIT 
+3.   ROLL BACK 
+4.   SAVE POINT 
+
+RANKING CONCEPT 
+===============
+1. RANKING CONCEPT IS USED TO ASSIGN THE RANKS BASED ON A NUMERICAL COLUMN 
+   AFTER CONVERTING INTO ASCENDING OR DESCENDING ORDER 
+2. THERE ARE 3 TYPES OF RANKS FUNCTIONS 
+             A) ROW_NUMBER()
+             B) RANK()
+             C) DENSE_RANK()
+
+
+3. There are two types of ranking. 
+             A. ROW_WISE RANKING    : OVER BY
+                SYNTAX:
+                SELECT <CN1>,<CN2>,<CN3>,<RANK_FUNCTION> OVER (ORDER BY <CN> <ORDER>) FROM <TN>
+     
+             B. GROUP_WISE RANKING  : PARTITION BY 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 

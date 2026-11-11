@@ -1,0 +1,27 @@
+Structured Query Language (SQL)
+===============================
+1. SQL is not a programming language. SQL is a query language.
+2. To write the SQL queries, the best platform in the market was SSMS. 
+3. SSMS means SQL Server Management Studio. 
+4. SSMS is a tool where we can write the SQL query, 
+   and SSMS was developed by a company called Microsoft. 
+
+SSMS Services 
+================================================
+1. Database Engine : Database engine service is used to write the SQL query to the 
+                     structured database. 
+
+2. SSRS            : SQL Server Reporting Service is used to convert the files. 
+                     Example: PDF to Word document and Word document to PDF. 
+
+3. SSIS            : SQL Server Integration Service is used to connect one 
+                     database with another database. 
+
+4. SSAS            : SQL Server Analytic Service is used to convert the data into a 
+                     representative format. 
+
+5. Azure Cloud     : We can connect the tool to the cloud to get the data. 
+
+
+
+ 

@@ -1,0 +1,59 @@
+clauses concept 
+===============
+- All the aggregation functions are present in the clauses concept only.
+- Aggregation functions mean, for example, count, sum, average, etc. 
+- There are 2 types of clauses 
+        a) Group By clauses 
+        b) having clauses 
+
+Group By clauses 
+=================
+- Using `groupby`, we can group the data based on any of the columns, 
+  and we can implement the aggregation. 
+
+Example_data:
+
+             Country       Animal          Speed 
+             =====================================
+             India          Lion            80 
+             India          Tiger           180
+             USA            Lion             90
+             UK             Tiger           190
+       Mid East Africa      Lion            70 
+       West Africa          Tiger           200
+
+
+Group data based on country column 
+                              G1 = India 
+                              G2 = Usa 
+                              G3 = Uk 
+                              G4 = Mid East Africa 
+                              G5 = West Africa 
+
+
+Group data based on Animal column 
+                              G1 = Lion 
+                              G2 = Tiger 
+
+Usecase_1: which animal has total highest speed 
+         G1 (Lion) : (80 + 90 + 70) = 240 
+         G2 (Tiger): (180 + 190 + 200) = 570 
+
+
+Usecase_2: which animal has total highest speed 
+          G1 (Lion) : (80 + 90 + 70) = 240 / 3 = 80
+          G2 (Tiger): (180 + 190 + 200) = 570 / 3 = 190 
+
+SYNTAX:
+       SELECT <CN>,<AGGRREGATION_FUNCTION> FROM <TN> GROUP BY <CN>
+
+HAVING CLAUSES:
+================
+- The HAVING clause is used to group the data and to compare based on the conditions. 
+
+SYNTAX:
+      SELECT EMP_POSITION,SUM(EMPSALARY) AS TOTAL_SALARY FROM TCS_EMPLOYEES GROUP BY EMP_POSITION HAVING SUM(EMPSALARY) > 6000
+
+
+
+
